@@ -1,0 +1,4 @@
+CREATE TABLE wp_categories(
+  id INT UNSIGNED PRIMARY KEY,
+  name VARCHAR(128)
+);
