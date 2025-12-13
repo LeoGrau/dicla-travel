@@ -7,7 +7,7 @@
     <h1 class="pacifico-regular text-4xl">Dicla</h1>
     <div class="flex gap-4">
       <RouterLink
-        class="open-sans-500 text-sm"
+        class="monserrat-600 text-sm"
         v-for="(route, index) in routes"
         :to="route.to"
         :key="index"
