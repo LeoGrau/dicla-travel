@@ -1,10 +1,7 @@
 <template>
-  <!-- <div class="text-black absolute m-5 ml-[120px]" style="z-index: 99999">
-    {{ route.name }}
-  </div> -->
   <div
     ref="navbar"
-    :class="route.name ? navbarClasses[route.name][level] : navbarClasses['home'][1]"
+    :class="`${props.backgroundColor} border-b ${restColors[props.color!]}`"
     class="h-[70px] z-50 w-full flex items-center px-5 justify-between fixed top-0 transition-colors duration-200"
   >
     <h1 class="pacifico-regular text-4xl">Dicla</h1>
@@ -27,37 +24,31 @@ import { Earth } from 'lucide-vue-next'
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
-const navbar = ref<HTMLElement | null>(null)
+interface NavbarProps {
+  color?: string
+  backgroundColor?: string
+}
 
-const navbarClasses = {
-  'about-us': ['bg-zinc-900 border-b border-zinc-800 text-zinc-50'],
-  home: [
-    'bg-blue-50 border-b border-b-blue-100 text-black',
-    'bg-zinc-50 border-b border-b-zinc-200 text-zinc-900',
-    'bg-blue-50 border-b border-b-blue-100',
-  ],
-} as any
+const restColors = {
+  linear: 'text-white border-b-zinc-200/30 backdrop-blur-xl',
+  zinc: 'border-b-zinc-200/30 text-white',
+  indigo: 'border-b-indigo-200/30 text-zinc-800',
+  neutral: 'border-b-neutral-200 text-zinc-900',
+  blue: 'border-b-blue-100',
+  red: 'border-b-red-300',
+  green: 'border-b-green-300',
+  yellow: 'border-b-yellow-300',
+} as { [key: string]: any }
+
+const props = defineProps<NavbarProps>()
+
+const navbar = ref<HTMLElement | null>(null)
 
 const route = useRoute()
 // const routeName = ref(route.name!)
 
-const level = ref(0)
-
-function handleScroll() {
-  const scrollY = window.scrollY
-  // console.log('navbar', scrollY, window.innerHeight)
-  if (window.innerHeight > scrollY + 70 && scrollY >= 0) {
-    level.value = 0
-  }
-  if (window.innerHeight <= scrollY + 70) {
-    level.value = 1
-    // navbar.value?.classList.add('bg-black')
-  }
-}
-
 onMounted(() => {
-  console.log('Route', route.name)
-  window.addEventListener('scroll', handleScroll)
+  console.log('Route', route.name, props.color)
 })
 
 const routes = [
@@ -73,18 +64,13 @@ const routes = [
   },
   {
     pageName: 'Discover',
-    pageLabel: '',
-    to: '/',
-  },
-  {
-    pageName: 'Booking',
-    pageLabel: '',
-    to: '/',
+    pageLabel: 'discover',
+    to: '/discover',
   },
   {
     pageName: 'Contact',
-    pageLabel: '',
-    to: '/',
+    pageLabel: 'contact',
+    to: '/contact',
   },
 ]
 </script>

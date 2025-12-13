@@ -1,7 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wdth,wght@0,87.5,300..800;1,87.5,300..800&family=Pacifico&family=Poppins:wght@400;600;700&display=swap');
 @import 'tailwindcss';
+
+@import './src/styles/flags.css';
+
 @theme {
   --font-inter: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.polaroid-wrapper * {
+  transform-box: fill-box;
 }
 
 .pacifico-regular {
@@ -101,4 +116,43 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+/* Slide Animation */
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Injecting tailwind classes */
+@utility animate-slide {
+  animation: slide 10s linear infinite;
+}
+
+@utility mask-fade-x {
+  mask-image: linear-gradient(to right, transparent, grey 30%, grey 70%, transparent);
+}
+
+@utility mask-fade-y {
+  mask-image: linear-gradient(to bottom, transparent, grey 30%, grey 70%, transparent);
+}
+
+@utility mask-fade-all {
+  mask-image:
+    linear-gradient(to right, transparent, black 30%, black 70%, transparent),
+    linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
+  mask-composite: intersect;
 }
