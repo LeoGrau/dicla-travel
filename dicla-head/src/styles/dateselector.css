@@ -1,0 +1,131 @@
+.flatpickr-calendar {
+  width: 360px;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.flatpickr-innerContainer {
+  display: flex;
+  justify-content: center;
+}
+
+span.flatpickr-prev-month {
+  position: relative !important;
+}
+
+span.flatpickr-next-month {
+  position: relative !important;
+}
+
+.flatpickr-months {
+  display: flex;
+  align-items: center;
+}
+
+.flatpickr-day.selected {
+  background: var(--color-indigo-400) !important;
+  border: none !important;
+}
+
+.flatpickr-day {
+  border: none !important;
+  transition: background 200ms ease;
+}
+.flatpickr-day.selected:hover {
+  background: var(--color-indigo-400) !important;
+  border: none !important;
+}
+.flatpickr-day:hover {
+  background: var(--color-zinc-100) !important;
+}
+
+option.flatpickr-monthDropdown-month {
+  font-size: 14px !important;
+  cursor: pointer;
+}
+
+select.flatpickr-monthDropdown-months {
+  all: initial;
+  /* font-size: var(--text-sm) !important;
+  font-family: 'Montserrat' !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  color: var(--color-indigo-600) !important;
+  border: 1px solid var(--color-neutral-200) !important;
+  border-radius: 8px !important;
+  background: white !important;
+  padding: 10px !important;
+  transition: box-shadow 200ms ease; */
+  display: none;
+}
+
+.flatpickr-month {
+  all: initial;
+  position: relative;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center;
+  background: white !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px I !important;
+  height: 60px !important;
+  width: 100px !important;
+}
+
+select.flatpickr-monthDropdown-months:hover {
+  /* box-shadow: 0 0 0 0.2rem var(--color-indigo-100); */
+}
+
+div.flatpickr-current-month {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+div.numInputWrapper {
+  all: initial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: fit-content;
+  width: fit-content !important;
+  overflow: hidden;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 10px;
+  transition: box-shadow 200ms ease;
+}
+
+div.numInputWrapper:hover {
+  box-shadow: 0 0 0 0.2rem var(--color-indigo-100);
+}
+
+input.numInput.cur-year {
+  all: initial;
+  font-family: 'Montserrat';
+  font-size: var(--text-sm) !important;
+  cursor: pointer !important;
+  color: var(--color-zinc-900) !important;
+  background: white;
+  height: 100%;
+  width: 60px !important;
+  border-radius: 10px;
+  padding: 10px !important;
+}
+
+div.flatpickr-rContainer {
+  background-color: white;
+}
+
+span.arrowUp::after {
+  position: absolute;
+  display: inline-block;
+}
+span.arrowDown::after {
+  position: absolute;
+  display: inline-block;
+}

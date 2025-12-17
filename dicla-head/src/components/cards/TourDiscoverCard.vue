@@ -3,20 +3,23 @@
     class="bg-white hover:scale-[1.02] shadow rounded-lg w-full overflow-hidden flex flex-col cursor-pointer transition-transform"
   >
     <div class="w-full relative">
-     <div class="w-full overflow-hidden relative">
-       <button
-
-      @click="wished = !wished"
-        class="absolute right-3 top-3 bg-white flex justify-center rounded-full p-2 items-center cursor-pointer transition-shadow hover:shadow-[0_0_0_4px_var(--color-red-200)]"
-      >
-        <Heart :size="20" :fill="wished? 'var(--color-red-500)': 'transparent'" :color="wished? '': 'var(--color-zinc-700)'"></Heart>
-      </button>
-      <img
-        class="w-full"
-        src="http://192.168.1.58/wp-content/uploads/2025/12/huascaran-scaled.jpg"
-        alt=""
-      />
-     </div>
+      <div class="w-full overflow-hidden relative">
+        <button
+          @click="wished = !wished"
+          class="absolute right-3 top-3 bg-white flex justify-center rounded-full p-2 items-center cursor-pointer transition-shadow hover:shadow-[0_0_0_4px_var(--color-red-200)]"
+        >
+          <Heart
+            :size="20"
+            :fill="wished ? 'var(--color-red-500)' : 'transparent'"
+            :color="wished ? '' : 'var(--color-zinc-700)'"
+          ></Heart>
+        </button>
+        <img
+          class="w-full"
+          src="http://192.168.1.58/wp-content/uploads/2025/12/huascaran-scaled.jpg"
+          alt=""
+        />
+      </div>
       <div class="flex items-center absolute bottom-0 right-2.5 translate-y-[50%]">
         <button
           class="cursor-pointer bg-teal-400 text-white w-10 h-10 flex items-center justify-center rounded-full hover:shadow-[0_0_0_4px_var(--color-teal-100)] transition-shadow"
@@ -57,6 +60,5 @@ import { ref } from 'vue'
 import { StarIcon, Heart } from 'lucide-vue-next'
 
 const wished = ref(false)
-
 </script>
 <style lang=""></style>

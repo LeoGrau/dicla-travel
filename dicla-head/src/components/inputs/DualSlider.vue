@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full gap-3">
+  <div class="flex w-full gap-3 z-20 relative">
     <div class="flex flex-col justify-center w-1/2">
       <label class="text-sm" for="">Min</label>
       <input
@@ -23,7 +23,7 @@
       />
     </div>
   </div>
-  <div class="relative w-full">
+  <div class="relative w-full h-[30px] flex items-center">
     <input
       ref="maxInput"
       @input="handleInput()"
@@ -32,7 +32,7 @@
       max="100"
       type="range"
       v-model="maxValue"
-      class="slider absolute w-full bg-transparent! z-50 text-xs cursor-grab"
+      class="slider absolute w-full bg-transparent! z-40 text-xs cursor-grab"
     />
     <input
       ref="minInput"
@@ -42,7 +42,7 @@
       max="100"
       type="range"
       v-model="minValue"
-      class="slider absolute w-full z-40 cursor-grab"
+      class="slider absolute w-full z-30 cursor-grab"
     />
   </div>
 </template>
@@ -116,9 +116,10 @@ input[type='range']::-webkit-slider-thumb {
     var(--color-zinc-200) 100%
   );
   pointer-events: auto;
-  width: 17px;
-  height: 17px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   border: 1px solid var(--color-zinc-400);
+  box-shadow: 0px 2px 0.6em 1px rgba(44, 44, 44, 20%);
 }
 </style>

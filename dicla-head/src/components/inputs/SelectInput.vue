@@ -7,7 +7,7 @@
       {{ selectedOption }} items
     </div>
     <ul
-      class="absolute text-sm border-zinc-200 overflow-hidden transition-[height] w-full overflow-y-scroll bg-white rounded"
+      class="absolute text-sm border-zinc-200 overflow-hidden transition-[height] w-full overflow-y-scroll bg-white rounded bottom-[calc(100%+5px)]"
       :class="{
         'h-0': !optionsAreVisible,
         'h-[100px] shadow-[0_0_2px_1px_var(--color-zinc-300)]': optionsAreVisible,
@@ -44,4 +44,4 @@ function setItemsPerPage(nItems: number) {
 
 const selectedOption = defineModel({ default: 10 })
 </script>
-<style lang=""></style>
+<style></style>

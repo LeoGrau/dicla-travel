@@ -12,7 +12,9 @@
         "
       />
     </div>
-    <DiclaFooter></DiclaFooter>
+    <div>
+      <DiclaFooter></DiclaFooter>
+    </div>
   </div>
 </template>
 <script setup lang="ts">

@@ -9,3 +9,530 @@
     INNER JOIN wp_cities c ON t.city_id = c.id
     ORDER BY t.ranking DESC
     LIMIT 16;  made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, WPGraphQL\Router::resolve_http_request, WPGraphQL\Router::process_http_request, WPGraphQL\Request->execute_http, GraphQL\Server\StandardServer->executeRequest, GraphQL\Server\Helper->executeOperation, GraphQL\Server\Helper->promiseToExecuteOperation, GraphQL\GraphQL::promiseToExecute, GraphQL\Executor\Executor::promiseToExecute, GraphQL\Executor\ReferenceExecutor->doExecute, GraphQL\Executor\ReferenceExecutor->executeOperation, GraphQL\Executor\ReferenceExecutor->executeFields, GraphQL\Executor\ReferenceExecutor->resolveField, GraphQL\Executor\ReferenceExecutor->resolveFieldValueOrError, WPGraphQL\Utils\InstrumentSchema::WPGraphQL\Utils\{closure}, get_top16_tours
+[15-Dec-2025 20:25:33 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-request.php:930
+Stack trace:
+#0 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-request.php(930): is_numeric('10', Object(WP_REST_Request), 'page_size')
+#1 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(1114): WP_REST_Request->has_valid_params()
+#2 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api.php(467): WP_REST_Server->serve_request('/tours/query/pa...')
+#4 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp-hook.php(341): rest_api_loaded(Object(WP))
+#5 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\plugin.php(570): WP_Hook->do_action(Array)
+#7 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp.php(821): WP->parse_request('')
+#9 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\functions.php(1343): WP->main('')
+#10 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-blog-header.php(16): wp()
+#11 D:\Xenocore\Dicla Travel\wp-baas\app\public\index.php(17): require('D:\\Xenocore\\Dic...')
+#12 {main}
+  thrown in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-request.php on line 930
+[15-Dec-2025 20:29:00 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 10 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:29:07 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 10 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:29:36 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 1 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:29:37 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 1 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:29:37 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 1 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:29:38 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 1 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:30:54 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 1 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:30:55 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 1 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:30:55 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 1 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:30:55 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 1 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:30:55 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 1 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:30:56 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 1 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:31:23 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 10 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:31:24 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 10 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:31:25 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 10 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:31:51 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 10 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:38:51 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 10 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:38:52 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 10 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:38:52 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 10 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:38:52 UTC] WordPress database error Table 'local.wp_table' doesn't exist for query SELECT * FROM wp_table LIMIT 10 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:44:14 UTC] WordPress database error Unknown column 't.id' in 'order clause' for query SELECT * FROM wp_tours ORDER BY t.id LIMIT 10 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 20:44:15 UTC] WordPress database error Unknown column 't.id' in 'order clause' for query SELECT * FROM wp_tours ORDER BY t.id LIMIT 10 OFFSET 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 21:09:22 UTC] WordPress database error Unknown column 'min_price' in 'where clause' for query SELECT * FROM wp_tours w_t 
+    WHERE w_t.ranking >= 3
+    AND w_t.price_usd BETWEEN min_price AND max_price
+    ORDER BY w_t.id 
+    LIMIT 5 
+    OFFSET 10 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 21:09:31 UTC] WordPress database error Unknown column 'min_price' in 'where clause' for query SELECT * FROM wp_tours w_t 
+    WHERE w_t.ranking >= 3
+    AND w_t.price_usd BETWEEN min_price AND max_price
+    ORDER BY w_t.id 
+    LIMIT 5 
+    OFFSET 10 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 21:09:34 UTC] WordPress database error Unknown column 'min_price' in 'where clause' for query SELECT * FROM wp_tours w_t 
+    WHERE w_t.ranking >= 3
+    AND w_t.price_usd BETWEEN min_price AND max_price
+    ORDER BY w_t.id 
+    LIMIT 5 
+    OFFSET 10 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[15-Dec-2025 22:41:29 UTC] WordPress database error Incorrect TIMESTAMP value: '' for query SELECT * FROM wp_tours w_t 
+    WHERE w_t.ranking >= 3.000000
+    AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+    AND w_t.updated_at BETWEEN '' AND ''
+    ORDER BY w_t.id 
+    LIMIT 5 
+    OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[16-Dec-2025 22:20:36 UTC] PHP Warning:  Undefined variable $query in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 174
+[16-Dec-2025 22:21:34 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+    WHERE w_t.ranking >= 1.000000
+    AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+    AND w_t.updated_at BETWEEN '2025-06-16' AND '2026-12-16'
+    AND w_t.duration BETWEEN 1 AND 1
+    ORDER BY w_t.id 
+    LIMIT 5 
+    OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 00:45:21 UTC] PHP Warning:  preg_match(): Unknown modifier 'd' in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 87
+[17-Dec-2025 00:48:40 UTC] PHP Warning:  preg_match(): Unknown modifier 'd' in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 87
+[17-Dec-2025 00:48:48 UTC] PHP Warning:  preg_match(): Unknown modifier 'd' in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 87
+[17-Dec-2025 00:49:19 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+    WHERE w_t.ranking >= 3.000000
+    AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+    AND w_t.updated_at BETWEEN '2025-12-01' AND '2025-12-31'
+    AND w_t.duration BETWEEN 1 AND 20
+    ORDER BY w_t.id
+    LIMIT 5 
+    OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 00:50:50 UTC] PHP Warning:  Array to string conversion in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 179
+[17-Dec-2025 00:50:50 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+    WHERE w_t.ranking >= 3.000000
+    AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+    AND w_t.updated_at BETWEEN '2025-12-01' AND '2025-12-31'
+    AND w_t.duration BETWEEN 1 AND 20
+    ORDER BY w_t.id
+    LIMIT 5 
+    OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 01:15:34 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+    WHERE w_t.ranking >= 3.000000
+    AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+    AND w_t.updated_at BETWEEN '2025-12-01' AND '2025-12-31'
+    AND w_t.duration BETWEEN 1 AND 20
+
+    ORDER BY w_t.id
+    LIMIT 5 
+    OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 01:15:54 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+    WHERE w_t.ranking >= 3.000000
+    AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+    AND w_t.updated_at BETWEEN '2025-12-01' AND '2025-12-31'
+    AND w_t.duration BETWEEN 1 AND 20
+
+    ORDER BY w_t.id
+    LIMIT 5 
+    OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 01:16:22 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+    WHERE w_t.ranking >= 3.000000
+    AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+    AND w_t.updated_at BETWEEN '2025-12-01' AND '2025-12-31'
+    AND w_t.duration BETWEEN 1 AND 20
+
+    ORDER BY w_t.id
+    LIMIT 5 
+    OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 01:17:22 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+    WHERE w_t.ranking >= 3.000000
+    AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+    AND w_t.updated_at BETWEEN '2025-12-01' AND '2025-12-31'
+    AND w_t.duration BETWEEN 1 AND 20
+
+    ORDER BY w_t.id
+    LIMIT 5 
+    OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 01:17:42 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+    WHERE w_t.ranking >= 3.000000
+    AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+    AND w_t.updated_at BETWEEN '2025-12-01' AND '2025-12-31'
+    AND w_t.duration BETWEEN 1 AND 20
+
+    ORDER BY w_t.id
+    LIMIT 5 
+    OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 01:22:30 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+    WHERE w_t.ranking >= 3.000000
+    AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+    AND w_t.updated_at BETWEEN '2025-12-01' AND '2025-12-31'
+    AND w_t.duration BETWEEN 1 AND 20
+
+    ORDER BY w_t.id
+    LIMIT 5 
+    OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 01:27:25 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+    WHERE w_t.ranking >= 3.000000
+    AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+    AND w_t.updated_at BETWEEN '2025-12-01' AND '2025-12-31'
+    AND w_t.duration BETWEEN 1 AND 20
+    AND w_t.categories IN ('10,1,2')
+    ORDER BY w_t.id
+    LIMIT 5 
+    OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 01:27:59 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+    WHERE w_t.ranking >= 3.000000
+    AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+    AND w_t.updated_at BETWEEN '2025-12-01' AND '2025-12-31'
+    AND w_t.duration BETWEEN 1 AND 20
+    AND w_t.categories IN ('10,1,2')
+    ORDER BY w_t.id
+    LIMIT 5 
+    OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 01:44:05 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 176
+[17-Dec-2025 01:44:05 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 176
+[17-Dec-2025 01:44:55 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 176
+[17-Dec-2025 01:44:55 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 176
+[17-Dec-2025 01:44:55 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 176
+[17-Dec-2025 01:44:56 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 176
+[17-Dec-2025 01:58:52 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 179
+[17-Dec-2025 01:58:52 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 179
+[17-Dec-2025 01:58:52 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 179
+[17-Dec-2025 01:58:53 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 179
+[17-Dec-2025 01:58:53 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 179
+[17-Dec-2025 01:58:53 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 179
+[17-Dec-2025 01:58:53 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 179
+[17-Dec-2025 01:58:53 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 179
+[17-Dec-2025 01:58:53 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 179
+[17-Dec-2025 01:58:53 UTC] PHP Fatal error:  Cannot use positional argument after argument unpacking in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 179
+[17-Dec-2025 02:00:01 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2025-12-01' AND '2025-12-31'
+         AND w_t.duration BETWEEN 1 AND 20
+         AND w_t.categories IN (10,1,2)
+         ORDER BY w_t.id
+         LIMIT 5 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 02:00:11 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2025-12-01' AND '2025-12-31'
+         AND w_t.duration BETWEEN 1 AND 20
+         AND w_t.categories IN (1,2)
+         ORDER BY w_t.id
+         LIMIT 5 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 02:00:26 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2025-12-01' AND '2025-12-31'
+         AND w_t.duration BETWEEN 1 AND 20
+         AND w_t.categories IN (1,2)
+         ORDER BY w_t.id
+         LIMIT 10 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 02:00:31 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2025-12-01' AND '2025-12-31'
+         AND w_t.duration BETWEEN 1 AND 20
+         AND w_t.categories IN (1,3)
+         ORDER BY w_t.id
+         LIMIT 10 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 02:00:41 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2025-12-31'
+         AND w_t.duration BETWEEN 1 AND 20
+         AND w_t.categories IN (1,3)
+         ORDER BY w_t.id
+         LIMIT 10 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 02:00:46 UTC] WordPress database error Unknown column 'w_t.duration' in 'where clause' for query SELECT * FROM wp_tours w_t 
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2026-12-31'
+         AND w_t.duration BETWEEN 1 AND 20
+         AND w_t.categories IN (1,3)
+         ORDER BY w_t.id
+         LIMIT 10 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 11:22:27 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%f
+         AND w_t.price_usd BETWEEN %f AND %f
+         AND w_t.updated_at BE' at line 3 for query SELECT * FROM wp_tours w_t
+        INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         WHERE w_t.ranking >= %f
+         AND w_t.price_usd BETWEEN %f AND %f
+         AND w_t.updated_at BETWEEN %s AND %s
+         AND w_t.duration_hours BETWEEN %d AND %d
+         AND w_tc.category_id IN (%d,%d)
+         ORDER BY w_t.id
+         LIMIT %d 
+         OFFSET %d;ORDER BY w_t.id
+         LIMIT %d 
+         OFFSET %d; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 11:23:24 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%f
+         AND w_t.price_usd BETWEEN %f AND %f
+         AND w_t.updated_at BE' at line 3 for query SELECT * FROM wp_tours w_t
+        INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         WHERE w_t.ranking >= %f
+         AND w_t.price_usd BETWEEN %f AND %f
+         AND w_t.updated_at BETWEEN %s AND %s
+         AND w_t.duration_hours BETWEEN %d AND %dORDER BY w_t.id
+         LIMIT %d 
+         OFFSET %d; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 11:24:09 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY w_t.id
+         LIMIT 1 
+         OFFSET 3' at line 6 for query SELECT * FROM wp_tours w_t
+        INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2026-12-31'
+         AND w_t.duration_hours BETWEEN 1 AND 120ORDER BY w_t.id
+         LIMIT 1 
+         OFFSET 3; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 11:24:10 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY w_t.id
+         LIMIT 1 
+         OFFSET 3' at line 6 for query SELECT * FROM wp_tours w_t
+        INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2026-12-31'
+         AND w_t.duration_hours BETWEEN 1 AND 120ORDER BY w_t.id
+         LIMIT 1 
+         OFFSET 3; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 11:24:25 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY w_t.id
+         LIMIT 1 
+         OFFSET 3' at line 6 for query SELECT * FROM wp_tours w_t
+        LEFT JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2026-12-31'
+         AND w_t.duration_hours BETWEEN 1 AND 120ORDER BY w_t.id
+         LIMIT 1 
+         OFFSET 3; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 11:26:54 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'w_tc.category_id IN (1,3) ORDER BY w_t.id
+         LIMIT 10 
+         OFFSET 0' at line 6 for query SELECT * FROM wp_tours w_t
+        LEFT JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2026-12-31'
+         AND w_t.duration_hours BETWEEN 1 AND 120AND w_tc.category_id IN (1,3) ORDER BY w_t.id
+         LIMIT 10 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 12:03:33 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+       JSON_ARRAYAGG(
+               JSON_OBJECT(
+                       'i' at line 1 for query SELECT w_t.*, ,
+       JSON_ARRAYAGG(
+               JSON_OBJECT(
+                       'id', w_ca.id,
+                       'name', w_ca.name
+               )
+       ) as 'category_names' FROM wp_tours w_t
+        LEFT JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         LEFT JOIN wp_categories w_ca ON w_ca.id = w_tc.category_id
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2026-12-31'
+         AND w_t.duration_hours BETWEEN 1 AND 200 ORDER BY w_t.id
+          GROUP BY w_t.id
+         LIMIT 10 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 12:04:29 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY w_t.id
+         LIMIT 10 
+         OFFSET 0' at line 14 for query SELECT w_t.*,
+       JSON_ARRAYAGG(
+               JSON_OBJECT(
+                       'id', w_ca.id,
+                       'name', w_ca.name
+               )
+       ) as 'category_names' FROM wp_tours w_t
+        LEFT JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         LEFT JOIN wp_categories w_ca ON w_ca.id = w_tc.category_id
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2026-12-31'
+         AND w_t.duration_hours BETWEEN 1 AND 200 ORDER BY w_t.id
+          GROUP BY w_t.id
+         LIMIT 10 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 12:59:28 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php:221
+Stack trace:
+#0 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(1292): get_paged_tour_by_query(Object(WP_REST_Request))
+#1 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/tours/query/pa...', Array, NULL)
+#2 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api.php(467): WP_REST_Server->serve_request('/tours/query/pa...')
+#4 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp-hook.php(341): rest_api_loaded(Object(WP))
+#5 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\plugin.php(570): WP_Hook->do_action(Array)
+#7 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp.php(821): WP->parse_request('')
+#9 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\functions.php(1343): WP->main('')
+#10 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-blog-header.php(16): wp()
+#11 D:\Xenocore\Dicla Travel\wp-baas\app\public\index.php(17): require('D:\\Xenocore\\Dic...')
+#12 {main}
+  thrown in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 221
+[17-Dec-2025 12:59:42 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php:221
+Stack trace:
+#0 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(1292): get_paged_tour_by_query(Object(WP_REST_Request))
+#1 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/tours/query/pa...', Array, NULL)
+#2 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api.php(467): WP_REST_Server->serve_request('/tours/query/pa...')
+#4 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp-hook.php(341): rest_api_loaded(Object(WP))
+#5 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\plugin.php(570): WP_Hook->do_action(Array)
+#7 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp.php(821): WP->parse_request('')
+#9 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\functions.php(1343): WP->main('')
+#10 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-blog-header.php(16): wp()
+#11 D:\Xenocore\Dicla Travel\wp-baas\app\public\index.php(17): require('D:\\Xenocore\\Dic...')
+#12 {main}
+  thrown in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 221
+[17-Dec-2025 13:54:10 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOI' at line 11 for query SELECT w_t.*,
+       JSON_ARRAYAGG(
+               JSON_OBJECT(
+                       'id', w_ca.id,
+                       'name', w_ca.name
+               )
+       ) as 'categories', JSON_OBJECT(
+               'id', w_t.city_id,
+               'name', w_ci.name
+       ) as 'city' FROM wp_tours w_t,
+        INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOIN wp_categories w_ca ON w_ca.id = w_tc.category_id
+         INNER JOIN wp_cities w_ci ON w_ci.id = w_t.city_id
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2026-12-31'
+         AND w_t.duration_hours BETWEEN 1 AND 200 GROUP BY w_t.id ORDER BY w_t.id
+         LIMIT 10 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 13:54:41 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOI' at line 11 for query SELECT w_t.*,
+       JSON_ARRAYAGG(
+               JSON_OBJECT(
+                       'id', w_ca.id,
+                       'name', w_ca.name
+               )
+       ) as 'categories', JSON_OBJECT(
+               'id', w_t.city_id,
+               'name', w_ci.name
+       ) as 'city' FROM wp_tours w_t,
+        INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOIN wp_categories w_ca ON w_ca.id = w_tc.category_id
+         INNER JOIN wp_cities w_ci ON w_ci.id = w_t.city_id
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2026-12-31'
+         AND w_t.duration_hours BETWEEN 1 AND 200 GROUP BY w_t.id ORDER BY w_t.id
+         LIMIT 10 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 13:54:49 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOI' at line 11 for query SELECT w_t.*,
+       JSON_ARRAYAGG(
+               JSON_OBJECT(
+                       'id', w_ca.id,
+                       'name', w_ca.name
+               )
+       ) as 'categories', JSON_OBJECT(
+               'id', w_t.city_id,
+               'name', w_ci.name
+       ) as 'city' FROM wp_tours w_t,
+        INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOIN wp_categories w_ca ON w_ca.id = w_tc.category_id
+         INNER JOIN wp_cities w_ci ON w_ci.id = w_t.city_id
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2026-12-31'
+         AND w_t.duration_hours BETWEEN 1 AND 200 GROUP BY w_t.id ORDER BY w_t.id
+         LIMIT 10 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 13:55:41 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOI' at line 11 for query SELECT w_t.*,
+       JSON_ARRAYAGG(
+               JSON_OBJECT(
+                       'id', w_ca.id,
+                       'name', w_ca.name
+               )
+       ) as 'categories', JSON_OBJECT(
+               'id', w_t.city_id,
+               'name', w_ci.name
+       ) as 'city' FROM wp_tours w_t,
+        INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOIN wp_categories w_ca ON w_ca.id = w_tc.category_id
+         INNER JOIN wp_cities w_ci ON w_ci.id = w_t.city_id
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2026-12-31'
+         AND w_t.duration_hours BETWEEN 1 AND 200 GROUP BY w_t.id ORDER BY w_t.id
+         LIMIT 10 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 13:55:43 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOI' at line 11 for query SELECT w_t.*,
+       JSON_ARRAYAGG(
+               JSON_OBJECT(
+                       'id', w_ca.id,
+                       'name', w_ca.name
+               )
+       ) as 'categories', JSON_OBJECT(
+               'id', w_t.city_id,
+               'name', w_ci.name
+       ) as 'city' FROM wp_tours w_t,
+        INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOIN wp_categories w_ca ON w_ca.id = w_tc.category_id
+         INNER JOIN wp_cities w_ci ON w_ci.id = w_t.city_id
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2026-12-31'
+         AND w_t.duration_hours BETWEEN 1 AND 200 GROUP BY w_t.id ORDER BY w_t.id
+         LIMIT 10 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 13:55:43 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOI' at line 11 for query SELECT w_t.*,
+       JSON_ARRAYAGG(
+               JSON_OBJECT(
+                       'id', w_ca.id,
+                       'name', w_ca.name
+               )
+       ) as 'categories', JSON_OBJECT(
+               'id', w_t.city_id,
+               'name', w_ci.name
+       ) as 'city' FROM wp_tours w_t,
+        INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOIN wp_categories w_ca ON w_ca.id = w_tc.category_id
+         INNER JOIN wp_cities w_ci ON w_ci.id = w_t.city_id
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2026-12-31'
+         AND w_t.duration_hours BETWEEN 1 AND 200 GROUP BY w_t.id ORDER BY w_t.id
+         LIMIT 10 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 13:55:57 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOI' at line 11 for query SELECT w_t.*,
+       JSON_ARRAYAGG(
+               JSON_OBJECT(
+                       'id', w_ca.id,
+                       'name', w_ca.name
+               )
+       ) as 'categories', JSON_OBJECT(
+               'id', w_t.city_id,
+               'name', w_ci.name
+       ) as 'city' FROM wp_tours w_t,
+        INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOIN wp_categories w_ca ON w_ca.id = w_tc.category_id
+         INNER JOIN wp_cities w_ci ON w_ci.id = w_t.city_id
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2026-12-31'
+         AND w_t.duration_hours BETWEEN 1 AND 200 AND w_tc.category_id IN (1,2) GROUP BY w_t.id ORDER BY w_t.id
+         LIMIT 10 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[17-Dec-2025 13:56:08 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOI' at line 11 for query SELECT w_t.*,
+       JSON_ARRAYAGG(
+               JSON_OBJECT(
+                       'id', w_ca.id,
+                       'name', w_ca.name
+               )
+       ) as 'categories', JSON_OBJECT(
+               'id', w_t.city_id,
+               'name', w_ci.name
+       ) as 'city' FROM wp_tours w_t,
+        INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOIN wp_categories w_ca ON w_ca.id = w_tc.category_id
+         INNER JOIN wp_cities w_ci ON w_ci.id = w_t.city_id
+         WHERE w_t.ranking >= 3.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 100.000000
+         AND w_t.updated_at BETWEEN '2024-12-01' AND '2026-12-31'
+         AND w_t.duration_hours BETWEEN 1 AND 200 AND w_tc.category_id IN (1,3) GROUP BY w_t.id ORDER BY w_t.id
+         LIMIT 10 
+         OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query

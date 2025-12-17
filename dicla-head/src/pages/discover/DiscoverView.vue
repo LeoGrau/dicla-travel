@@ -1,9 +1,9 @@
 <template>
-  <div ref="firstSectionRef">
-    <section class="bg-neutral-50 flex">
+  <div ref="firstSectionRef" class="h-fit relative">
+    <section class="bg-neutral-50 flex h-[calc(100dvh-70px)] w-full">
       <TourFilter></TourFilter>
-      <div class="flex flex-col items-center w-full bg-white">
-        <div class="w-full p-4 min-h-dvh flex flex-col items-center max-w-[1300px]">
+      <div class="w-full flex flex-col">
+        <div class="w-full p-4 flex flex-col items-center max-w-[1300px] overflow-y-scroll">
           <div class="flex flex-col">
             <SearchInput class="self-end mb-4"></SearchInput>
             <div
@@ -13,7 +13,9 @@
             </div>
           </div>
         </div>
-        <DiclaPaginator></DiclaPaginator>
+        <div class="flex justify-center items-center bg-white p-3">
+          <DiclaPaginator></DiclaPaginator>
+        </div>
       </div>
     </section>
   </div>

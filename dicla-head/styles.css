@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wdth,wght@0,87.5,300..800;1,87.5,300..800&family=Pacifico&family=Poppins:wght@400;600;700&display=swap');
+@import url('./src/styles/flags.css');
 @import 'tailwindcss';
+@import 'tailwindcss-primeui';
 
-@import './src/styles/flags.css';
+@custom-variant dark (&: where(.p-dark, .p-dark *)) @import
+  './src/styles/flags.css';
 
 @theme {
   --font-inter: 'Inter', sans-serif;
@@ -143,16 +146,22 @@ html {
 }
 
 @utility mask-fade-x {
+  -webkit-mask-image: linear-gradient(to right, transparent, grey 30%, grey 70%, transparent);
   mask-image: linear-gradient(to right, transparent, grey 30%, grey 70%, transparent);
 }
 
 @utility mask-fade-y {
+  -webkit-mask-image: linear-gradient(to right, transparent, grey 30%, grey 70%, transparent);
   mask-image: linear-gradient(to bottom, transparent, grey 30%, grey 70%, transparent);
 }
 
 @utility mask-fade-all {
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, black 30%, black 70%, transparent),
+    linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
   mask-image:
     linear-gradient(to right, transparent, black 30%, black 70%, transparent),
     linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
+  /* Allow to combine multiple mask images */
   mask-composite: intersect;
 }

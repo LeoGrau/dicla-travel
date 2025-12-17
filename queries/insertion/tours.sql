@@ -12,8 +12,8 @@ VALUES
  'Experience one of Peru’s most iconic natural wonders.',
  1, 55.00, 210.00,
  NOW(), NOW(),
- 'http://yourdomain.com/uploads/rainbow_mountain.jpg',
- 'active', 4.41, 1, 1
+ 'http://192.168.1.58/uploads/rainbow_mountain.jpg',
+ 'active', 4.41, 1
 ),
 
 (6,
@@ -23,8 +23,8 @@ VALUES
  'A cultural and photographic journey through unique Inca engineering.',
  1, 40.00, 150.00,
  NOW(), NOW(),
- 'http://yourdomain.com/uploads/maras_moray.jpg',
- 'active', 4.36, 1, 2
+ 'http://192.168.1.58/uploads/maras_moray.jpg',
+ 'active', 4.36, 1
 ),
 
 (7,
@@ -34,8 +34,8 @@ VALUES
  'Discover the heritage and history of the ancient Inca capital.',
  1, 35.00, 130.00,
  NOW(), NOW(),
- 'http://yourdomain.com/uploads/cusco_citytour.jpg',
- 'active', 4.18, 1, 2
+ 'http://192.168.1.58/uploads/cusco_citytour.jpg',
+ 'active', 4.18, 1
 ),
 
 -- LIMA --------------------------------------------------------------------------
@@ -46,8 +46,8 @@ VALUES
  'A colorful tour filled with art, culture, and history.',
  1, 30.00, 115.00,
  NOW(), NOW(),
- 'http://yourdomain.com/uploads/barranco_lima.jpg',
- 'active', 4.12, 2, 2
+ 'http://192.168.1.58/uploads/barranco_lima.jpg',
+ 'active', 4.12, 2
 ),
 
 (9,
@@ -57,8 +57,8 @@ VALUES
  'Learn about pre-Inca and Inca religious history.',
  1, 45.00, 170.00,
  NOW(), NOW(),
- 'http://yourdomain.com/uploads/pachacamac_lima.jpg',
- 'active', 4.22, 2, 2
+ 'http://192.168.1.58/uploads/pachacamac_lima.jpg',
+ 'active', 4.22, 2
 ),
 
 (10,
@@ -68,8 +68,8 @@ VALUES
  'Experience Peru’s world-renowned food culture.',
  1, 85.00, 320.00,
  NOW(), NOW(),
- 'http://yourdomain.com/uploads/lima_gastronomy.jpg',
- 'active', 4.55, 2, 3
+ 'http://192.168.1.58/uploads/lima_gastronomy.jpg',
+ 'active', 4.55, 2
 ),
 
 -- AREQUIPA -----------------------------------------------------------------------
@@ -80,8 +80,8 @@ VALUES
  'A challenging ascent for adventure enthusiasts.',
  2, 180.00, 690.00,
  NOW(), NOW(),
- 'http://yourdomain.com/uploads/misti_volcano.jpg',
- 'active', 4.33, 3, 1
+ 'http://192.168.1.58/uploads/misti_volcano.jpg',
+ 'active', 4.33, 3
 ),
 
 (12,
@@ -91,8 +91,8 @@ VALUES
  'A peaceful and historical walk inside the city’s most famous monastery.',
  1, 25.00, 95.00,
  NOW(), NOW(),
- 'http://yourdomain.com/uploads/santa_catalina.jpg',
- 'active', 4.44, 3, 2
+ 'http://192.168.1.58/uploads/santa_catalina.jpg',
+ 'active', 4.44, 3
 ),
 
 (13,
@@ -102,8 +102,8 @@ VALUES
  'Discover the origin of the White City’s architecture.',
  1, 35.00, 130.00,
  NOW(), NOW(),
- 'http://yourdomain.com/uploads/sillar_arequipa.jpg',
- 'active', 4.28, 3, 2
+ 'http://192.168.1.58/uploads/sillar_arequipa.jpg',
+ 'active', 4.28, 3
 ),
 
 -- IQUITOS -----------------------------------------------------------------------
@@ -114,8 +114,8 @@ VALUES
  'Explore untouched rainforest and diverse wildlife.',
  3, 260.00, 985.00,
  NOW(), NOW(),
- 'http://yourdomain.com/uploads/pacaya_samiria.jpg',
- 'active', 4.61, 4, 3
+ 'http://192.168.1.58/uploads/pacaya_samiria.jpg',
+ 'active', 4.61, 4
 ),
 
 (15,
@@ -125,8 +125,8 @@ VALUES
  'A unique cultural visit into Iquitos’ daily river life.',
  1, 35.00, 135.00,
  NOW(), NOW(),
- 'http://yourdomain.com/uploads/belen_iquitos.jpg',
- 'active', 4.07, 4, 2
+ 'http://192.168.1.58/uploads/belen_iquitos.jpg',
+ 'active', 4.07, 4
 ),
 
 (16,
@@ -136,6 +136,6 @@ VALUES
  'An exciting nighttime adventure in the Amazon rainforest.',
  1, 45.00, 170.00,
  NOW(), NOW(),
- 'http://yourdomain.com/uploads/night_safari.jpg',
- 'active', 4.48, 4, 1
+ 'http://192.168.1.58/uploads/night_safari.jpg',
+ 'active', 4.48, 4
 );
