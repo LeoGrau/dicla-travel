@@ -1,21 +1,34 @@
 <template>
   <div
-    @click="isClicked = !isClicked"
-    :class="{ 'bg-neutral-200': !isClicked, 'bg-neutral-800 text-neutral-200': isClicked }"
-    class="rounded-full text-xs px-3 py-2 cursor-pointer transition-colors"
+    @click="console.log('icon', props.icon)"
+    :class="{
+      'bg-neutral-200': !props.selected,
+      'bg-neutral-800 text-neutral-200': props.selected,
+    }"
+    class="rounded-full text-xs px-3 py-2 cursor-pointer transition-colors flex items-center gap-1"
   >
-    {{ props.label }}
+    <i v-if="props.icon != undefined || props.icon != null" :class="props.icon"></i>
+    <span>
+      {{ props.object[props.property] }}
+    </span>
   </div>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted } from 'vue'
 
 interface DynamicChipProps {
-  label: string
+  property: string
+  object: any
+  selected?: boolean
+  icon?: string
 }
 
-const props = defineProps<DynamicChipProps>()
+const props = withDefaults(defineProps<DynamicChipProps>(), {
+  selected: false,
+})
 
-const isClicked = ref(false)
+onMounted(() => {
+  console.log(props.object, props.selected, props.icon)
+})
 </script>
 <style lang=""></style>

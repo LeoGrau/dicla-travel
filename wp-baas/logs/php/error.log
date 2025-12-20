@@ -536,3 +536,72 @@ Stack trace:
          AND w_t.duration_hours BETWEEN 1 AND 200 AND w_tc.category_id IN (1,3) GROUP BY w_t.id ORDER BY w_t.id
          LIMIT 10 
          OFFSET 0; made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[19-Dec-2025 13:44:48 UTC] PHP Warning:  Undefined property: wpdb::$prepare in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wpdb.php on line 788
+[19-Dec-2025 13:44:48 UTC] PHP Warning:  Array to string conversion in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 281
+[19-Dec-2025 13:44:48 UTC] PHP Warning:  Array to string conversion in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-tours-api\wp-tours-api.php on line 282
+[19-Dec-2025 13:45:53 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOI' at line 1 for query SELECT COUNT(DISTINCT w_t.id)INNER JOIN wp_tours_categories w_tc ON w_tc.tour_id = w_t.id
+         INNER JOIN wp_categories w_ca ON w_ca.id = w_tc.category_id
+         INNER JOIN wp_cities w_ci ON w_ci.id = w_t.city_id
+         WHERE w_t.ranking >= 1.000000
+         AND w_t.price_usd BETWEEN 20.000000 AND 99999999.000000
+         AND w_t.updated_at BETWEEN '2025-06-19' AND '2026-12-19'
+         AND w_t.duration_hours BETWEEN 1 AND 999999 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, get_paged_tour_by_query
+[19-Dec-2025 18:08:02 UTC] PHP Warning:  require_once(D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-cities-api/w-): Failed to open stream: No such file or directory in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-cities-api\wp-cities-api-plugin.php on line 13
+[19-Dec-2025 18:08:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-cities-api/w-' (include_path='.:/usr/share/php:/www/wp-content/pear') in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-cities-api\wp-cities-api-plugin.php:13
+Stack trace:
+#0 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-settings.php(560): include_once()
+#1 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-config.php(103): require_once('D:\\Xenocore\\Dic...')
+#2 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-load.php(50): require_once('D:\\Xenocore\\Dic...')
+#3 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-admin\admin-ajax.php(22): require_once('D:\\Xenocore\\Dic...')
+#4 {main}
+  thrown in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-cities-api\wp-cities-api-plugin.php on line 13
+[19-Dec-2025 18:16:39 UTC] PHP Parse error:  syntax error, unexpected token "as", expecting variable or "{" or "$" in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-cities-api\api\wp-cities-rest-api.php on line 16
+[19-Dec-2025 18:18:51 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-cities-api\api\wp-cities-rest-api.php:17
+Stack trace:
+#0 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(1292): get_cities_rest(Object(WP_REST_Request))
+#1 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/cities/v1/list...', Array, NULL)
+#2 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api.php(467): WP_REST_Server->serve_request('/cities/v1/list...')
+#4 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp-hook.php(341): rest_api_loaded(Object(WP))
+#5 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\plugin.php(570): WP_Hook->do_action(Array)
+#7 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp.php(821): WP->parse_request('')
+#9 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\functions.php(1343): WP->main('')
+#10 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-blog-header.php(16): wp()
+#11 D:\Xenocore\Dicla Travel\wp-baas\app\public\index.php(17): require('D:\\Xenocore\\Dic...')
+#12 {main}
+  thrown in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-cities-api\api\wp-cities-rest-api.php on line 17
+[19-Dec-2025 18:19:50 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-cities-api\api\wp-cities-rest-api.php:17
+Stack trace:
+#0 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(1292): get_cities_rest(Object(WP_REST_Request))
+#1 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/cities/v1/list...', Array, NULL)
+#2 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api.php(467): WP_REST_Server->serve_request('/cities/v1/list...')
+#4 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp-hook.php(341): rest_api_loaded(Object(WP))
+#5 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\plugin.php(570): WP_Hook->do_action(Array)
+#7 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp.php(821): WP->parse_request('')
+#9 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\functions.php(1343): WP->main('')
+#10 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-blog-header.php(16): wp()
+#11 D:\Xenocore\Dicla Travel\wp-baas\app\public\index.php(17): require('D:\\Xenocore\\Dic...')
+#12 {main}
+  thrown in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-cities-api\api\wp-cities-rest-api.php on line 17
+[19-Dec-2025 18:20:24 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-cities-api\api\wp-cities-rest-api.php:17
+Stack trace:
+#0 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(1292): get_cities_rest(Object(WP_REST_Request))
+#1 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/cities/v1/list...', Array, NULL)
+#2 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api\class-wp-rest-server.php(439): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\rest-api.php(467): WP_REST_Server->serve_request('/cities/v1/list...')
+#4 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp-hook.php(341): rest_api_loaded(Object(WP))
+#5 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\plugin.php(570): WP_Hook->do_action(Array)
+#7 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\class-wp.php(821): WP->parse_request('')
+#9 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-includes\functions.php(1343): WP->main('')
+#10 D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-blog-header.php(16): wp()
+#11 D:\Xenocore\Dicla Travel\wp-baas\app\public\index.php(17): require('D:\\Xenocore\\Dic...')
+#12 {main}
+  thrown in D:\Xenocore\Dicla Travel\wp-baas\app\public\wp-content\plugins\wp-cities-api\api\wp-cities-rest-api.php on line 17

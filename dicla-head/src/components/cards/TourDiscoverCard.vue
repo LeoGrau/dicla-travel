@@ -31,7 +31,7 @@
     <div class="info p-4 flex flex-col gap-2 mt-3">
       <div class="flex justify-between items-center">
         <div class="text-xs rounded-full px-3 py-1 bg-zinc-200 w-fit">
-          {{ 'Lima' }}
+          {{ props.tour.city.name }}
         </div>
         <div class="flex items-center gap-1">
           <StarIcon
@@ -41,23 +41,50 @@
             :fill="'oklch(87.9% 0.169 91.605)'"
           >
           </StarIcon>
-          <span class="text-xs text-neutral-800 inter-500 h-fit">4.5</span>
+          <span class="text-xs text-neutral-800 inter-500 h-fit">{{ props.tour.ranking }}</span>
         </div>
       </div>
       <div class="flex flex-wrap items-center gap-2">
-        <h1 class="inter-600">Nevado Huascara Super Tour</h1>
+        <h1 class="inter-600">{{ props.tour.title }}</h1>
       </div>
       <div class="flex gap-1 items-center">
         <span class="inter-500 text-sm">Precio</span>
-        <span class="inter-500 text-indigo-500">{{ '20.20' }}$</span>
+        <span class="inter-500 text-indigo-500">{{ props.tour.price_usd.toFixed(2) }} $</span>
       </div>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
-
 import { StarIcon, Heart } from 'lucide-vue-next'
+import type { TourModel } from '@/types/models/tour.model.interface'
+
+interface TourDiscoverCard {
+  tour: TourModel
+}
+
+const props = withDefaults(defineProps<TourDiscoverCard>(), {
+  tour: () => ({
+    id: 1,
+    title: 'Nevado Huascara Super Tour',
+    description: '',
+    slug: '',
+    summary: '',
+    duration_hours: '',
+    price_usd: 0,
+    price_pen: 0,
+    created_at: '',
+    updated_at: '',
+    url_image: '',
+    status: 'inactive',
+    ranking: 0,
+    categories: [{ id: 1, name: 'Adventure' }],
+    city: {
+      id: 1,
+      name: 'Lima',
+    },
+  }),
+})
 
 const wished = ref(false)
 </script>

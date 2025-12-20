@@ -2,20 +2,20 @@
   <div class="flex gap-2 w-fit">
     <div class="flex gap-3">
       <button
-        @click="currentPage = 1"
+        @click="setToFirstPage()"
         class="hover:bg-gray-200 transition-colors h-10 w-10 flex justify-center items-center rounded-full cursor-pointer"
       >
         <ChevronsLeft color="var(--color-zinc-400)" />
       </button>
       <button
-        @click="currentPage = currentPage - 1 <= 0 ? 1 : currentPage - 1"
+        @click="prevPage()"
         class="hover:bg-gray-200 transition-colors h-10 w-10 flex justify-center items-center rounded-full cursor-pointer"
       >
         <ChevronLeft color="var(--color-zinc-400)" />
       </button>
       <button
         v-for="index in setVisiblePages(currentPage)"
-        @click="currentPage = index"
+        @click="setToIndex(index)"
         :key="index"
         :class="{
           'bg-indigo-400 text-indigo-50': index === currentPage,
@@ -26,13 +26,13 @@
         {{ index }}
       </button>
       <button
-        @click="currentPage = currentPage + 1 > pages ? pages : currentPage + 1"
+        @click="nextPage()"
         class="hover:bg-gray-200 transition-colors h-10 w-10 flex justify-center items-center rounded-full cursor-pointer"
       >
         <ChevronRight color="var(--color-zinc-400)" />
       </button>
       <button
-        @click="currentPage = pages"
+        @click="setToLastPage()"
         class="hover:bg-gray-200 transition-colors h-10 w-10 flex justify-center items-center rounded-full cursor-pointer"
       >
         <ChevronsRight color="var(--color-zinc-400)" />
@@ -43,18 +43,64 @@
 </template>
 <script setup lang="ts">
 import { ChevronLeft, ChevronsLeft, ChevronRight, ChevronsRight } from 'lucide-vue-next'
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import SelectInput from './inputs/SelectInput.vue'
 
-const pages = ref(16)
-const currentPage = ref(1)
+const pageSize = ref(10)
+
+interface DiclaPaginatorProps {
+  total: number
+  currentPage: number
+}
+
+const props = withDefaults(defineProps<DiclaPaginatorProps>(), {
+  total: 41,
+  currentPage: 1,
+})
+
+// const currentPage = ref(1)
+const emits = defineEmits(['update:currentPage'])
+const _currentPage = ref(props.currentPage)
+
+function nextPage() {
+  _currentPage.value = _currentPage.value + 1 > pages.value ? pages.value : _currentPage.value + 1
+  emits('update:currentPage', _currentPage.value)
+}
+
+function prevPage() {
+  _currentPage.value = _currentPage.value - 1 <= 0 ? 1 : _currentPage.value - 1
+  emits('update:currentPage', _currentPage.value)
+}
+
+function setToLastPage() {
+  _currentPage.value = pages.value
+  emits('update:currentPage', _currentPage.value)
+}
+
+function setToFirstPage() {
+  _currentPage.value = 1
+  emits('update:currentPage', _currentPage.value)
+}
+
+function setToIndex(index: number) {
+  _currentPage.value = index
+  emits('update:currentPage', _currentPage.value)
+}
 
 function setVisiblePages(selectedItem: number) {
   if (selectedItem <= 0) throw new Error('Fuck')
-  if (Math.round(5 / 2) >= selectedItem) return Array.from({ length: 5 }, (_, index) => index + 1)
-  if (selectedItem + Math.floor(5 / 2) > pages.value)
-    return Array.from({ length: 5 }, (_, index) => pages.value - index).reverse()
+  const pagesPerSlide = Math.ceil(pages.value < 5 ? pages.value : 5)
+  console.log('Selected Item', selectedItem, pages.value, props.total, props.total / pageSize.value)
 
+  // Initial slide
+  if (Math.ceil(pagesPerSlide / 2) >= selectedItem)
+    return Array.from({ length: pagesPerSlide }, (_, index) => index + 1)
+
+  // Final slide
+  if (selectedItem + Math.floor(5 / 2) > pages.value)
+    return Array.from({ length: pagesPerSlide }, (_, index) => pages.value - index).reverse()
+
+  // Middle slides
   // Equivalent [selectedItem - 2, selectedItem - 1, selectedItem, selectedItem + 1, selectedItem + 2]
   const generatedArray = Array.from({ length: 5 }, (_, index) => {
     return selectedItem - 2 + index
@@ -62,8 +108,10 @@ function setVisiblePages(selectedItem: number) {
   return generatedArray
 }
 
+const pages = computed(() => Math.ceil(props.total / pageSize.value))
+
 onMounted(() => {
-  console.log('Weit: ', setVisiblePages(1))
+  console.log(pages.value)
 })
 </script>
 

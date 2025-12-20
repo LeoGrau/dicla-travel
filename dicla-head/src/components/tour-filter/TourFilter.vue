@@ -4,7 +4,8 @@
   >
     <div class="">
       <button
-        class="flex items-center justify-center gap-1 transition-colors bg-indigo-500 hover:bg-indigo-700 cursor-pointer py-3 px-4 rounded-full text-indigo-50"
+        @click="applyFilters()"
+        class="flex items-center justify-center gap-1 transition-colors bg-indigo-500 hover:bg-indigo-700 cursor-pointer py-5 px-6 rounded-full text-indigo-50"
       >
         <Filter :size="16"></Filter>
         <span class="text-sm">Apply Filter</span>
@@ -18,37 +19,31 @@
     </div>
     <div class="flex flex-col border-b-neutral-200 p-5 border-b">
       <h3 class="inter-600 mb-2">Category</h3>
-      <div class="flex flex-wrap gap-x-1 gap-y-1 mt-1">
-        <DynamicChip
-          :label="category.label"
-          v-for="(category, index) in categories"
-          :key="index"
-        ></DynamicChip>
-      </div>
+      <DynamicChipGroup
+        v-model:changed-items="selectedCategories"
+        :multiple="true"
+        :chips="categories"
+        property="label"
+      ></DynamicChipGroup>
     </div>
     <div class="flex flex-col border-b-neutral-200 p-5 border-b">
       <h3 class="inter-600 mb-2">Cities</h3>
-      <div class="flex flex-wrap gap-x-1 gap-y-1 mt-1">
-        <DynamicChip :label="city.label" v-for="(city, index) in cities" :key="index"></DynamicChip>
-      </div>
+      <DynamicChipGroup
+        v-model:changed-items="selectedCity"
+        :chips="cities"
+        property="label"
+      ></DynamicChipGroup>
     </div>
     <div class="flex flex-col border-b-neutral-200 p-5 border-b">
       <h3 class="inter-600 mb-2">Rating</h3>
       <div class="flex gap-2">
         <div class="flex gap-1">
-          <div
-            class="flex items-center gap-1 rounded-lg bg-zinc-100 p-1"
-            v-for="index in 5"
-            :key="index"
-          >
-            <span class="text-sm">{{ index }}</span>
-            <StarIcon
-              class="cursor-pointer"
-              fill="var(--color-amber-400)"
-              color=""
-              :size="16"
-            ></StarIcon>
-          </div>
+          <DynamicChipGroup
+            v-model:changed-items="selectedRating"
+            :icon="'bi bi-star-fill text-yellow-400'"
+            :chips="[{ rating: 1 }, { rating: 2 }, { rating: 3 }, { rating: 4 }, { rating: 5 }]"
+            property="rating"
+          ></DynamicChipGroup>
         </div>
       </div>
     </div>
@@ -74,16 +69,19 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import DualSlider from '../inputs/DualSlider.vue'
 import RadioButton from '../inputs/RadioButton.vue'
 
-import { Filter, StarIcon } from 'lucide-vue-next'
-import DynamicChip from '../inputs/DynamicChip.vue'
+import { Filter } from 'lucide-vue-next'
 import DateSelector from '../inputs/DateSelector.vue'
+import DynamicChipGroup from '../inputs/DynamicChipGroup.vue'
 
 const maxValue = ref(80)
 const minValue = ref(20)
+
+const selectedCategories = ref([])
+const selectedCity = ref()
 
 // Duration Options
 const durations = [
@@ -104,6 +102,27 @@ const categories = [
   { label: 'Beach & Coastal' },
 ]
 
+const selectedRating = ref()
+
 const cities = [{ label: 'Cusco' }, { label: 'Lima' }, { label: 'Arequipa' }, { label: 'Iquitos' }]
+
+function retrieve() {
+  
+}
+
+watch(selectedCategories, (current) => {
+  console.log('categories:', current)
+})
+
+watch(selectedCity, (current) => {
+  console.log('city:', current)
+})
+
+function applyFilters() {
+  console.log('Filters', {
+    selectedCategory: selectedCategories.value,
+    selectedCity: selectedCity.value,
+  })
+}
 </script>
 <style></style>

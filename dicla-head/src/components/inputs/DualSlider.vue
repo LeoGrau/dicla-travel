@@ -4,8 +4,7 @@
       <label class="text-sm" for="">Min</label>
       <input
         @input="handleInput()"
-        v-model="minValue"
-        min="0"
+        v-model.number="minValue"
         placeholder="Min"
         class="w-full border rounded-full border-gray-300 p-2 text-sm"
         type="number"
@@ -15,8 +14,7 @@
       <label class="text-sm" for="">Max</label>
       <input
         @input="handleInput()"
-        :min="1"
-        v-model="maxValue"
+        v-model.number="maxValue"
         placeholder="Max"
         class="w-full border rounded-full border-gray-300 p-2 text-sm"
         type="number"
@@ -27,21 +25,15 @@
     <input
       ref="maxInput"
       @input="handleInput()"
-      value="80"
-      min="1"
-      max="100"
       type="range"
-      v-model="maxValue"
+      v-model.number="maxValue"
       class="slider absolute w-full bg-transparent! z-40 text-xs cursor-grab"
     />
     <input
       ref="minInput"
       @input="handleInput()"
-      value="20"
-      min="0"
-      max="100"
       type="range"
-      v-model="minValue"
+      v-model.number="minValue"
       class="slider absolute w-full z-30 cursor-grab"
     />
   </div>
